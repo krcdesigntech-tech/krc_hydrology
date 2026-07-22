@@ -54,19 +54,628 @@
     <div class="container">
       <span class="tag">🌧️ SUBJECT</span>
       <h1>수문학</h1>
-      <p class="desc">강우, 유출, 수문순환 등 수문학 이론과 관련 공식을 정리합니다.</p>
+      <p class="desc">강우, 유출, 수문통계, 지하수 등 수문학 핵심 이론 40개 주제를 정리합니다.</p>
       <div class="progress-row">
-        <span class="progress-badge todo">자료 준비중</span>
+        <span class="progress-badge done">40개 주제 정리완료</span>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="empty-state">
-        <div class="ico">🚧</div>
-        <h3>내용 정리 중입니다</h3>
-        <p>수문학 세부 목차와 주제별 정리는 준비 중입니다. 정리가 완료되는 대로 이 페이지에 게시됩니다.</p>
+      <div class="layout" style="padding-top:0;">
+        <aside class="toc">
+          <h4>목차</h4>
+          <ul>
+            <li><a href="#topic-1"><span class="n">1</span>우리나라 수자원의 특성</a></li>
+            <li><a href="#topic-2"><span class="n">2</span>강수량 자료의 보정</a></li>
+            <li><a href="#topic-3"><span class="n">3</span>면적강수량 산정법</a></li>
+            <li><a href="#topic-4"><span class="n">4</span>IDF 곡선</a></li>
+            <li><a href="#topic-5"><span class="n">5</span>DAD 해석</a></li>
+            <li><a href="#topic-6"><span class="n">6</span>강우의 시간적 분포</a></li>
+            <li><a href="#topic-7"><span class="n">7</span>증발산</a></li>
+            <li><a href="#topic-8"><span class="n">8</span>유효우량 산정기법</a></li>
+            <li><a href="#topic-9"><span class="n">9</span>침투능 산정</a></li>
+            <li><a href="#topic-10"><span class="n">10</span>NRCS 초과우량(CN법)</a></li>
+            <li><a href="#topic-11"><span class="n">11</span>관측소 위치선정조건</a></li>
+            <li><a href="#topic-12"><span class="n">12</span>하천유량 측정 개요</a></li>
+            <li><a href="#topic-13"><span class="n">13</span>유량측정법 (유속계 등)</a></li>
+            <li><a href="#topic-14"><span class="n">14</span>수위-유량곡선·Loop형</a></li>
+            <li><a href="#topic-15"><span class="n">15</span>유출의 지배인자</a></li>
+            <li><a href="#topic-16"><span class="n">16</span>수문곡선</a></li>
+            <li><a href="#topic-17"><span class="n">17</span>단위도와 순간단위도</a></li>
+            <li><a href="#topic-18"><span class="n">18</span>NRCS 합성단위도</a></li>
+            <li><a href="#topic-19"><span class="n">19</span>Nagayasu 종합단위도</a></li>
+            <li><a href="#topic-20"><span class="n">20</span>합리식</a></li>
+            <li><a href="#topic-21"><span class="n">21</span>임계지속시간</a></li>
+            <li><a href="#topic-22"><span class="n">22</span>홍수추적 개요</a></li>
+            <li><a href="#topic-23"><span class="n">23</span>저수지 홍수추적(PLUS법)</a></li>
+            <li><a href="#topic-24"><span class="n">24</span>Muskingum 하도추적</a></li>
+            <li><a href="#topic-25"><span class="n">25</span>Clark 유역추적법</a></li>
+            <li><a href="#topic-26"><span class="n">26</span>RRL 모형</a></li>
+            <li><a href="#topic-27"><span class="n">27</span>장기유출모형</a></li>
+            <li><a href="#topic-28"><span class="n">28</span>용수지 모형</a></li>
+            <li><a href="#topic-29"><span class="n">29</span>수리학적 홍수추적</a></li>
+            <li><a href="#topic-30"><span class="n">30</span>단파</a></li>
+            <li><a href="#topic-31"><span class="n">31</span>수문 분석기법</a></li>
+            <li><a href="#topic-32"><span class="n">32</span>확률론적 수문분석기법</a></li>
+            <li><a href="#topic-33"><span class="n">33</span>수문자료의 수집과 정리</a></li>
+            <li><a href="#topic-34"><span class="n">34</span>빈도해석</a></li>
+            <li><a href="#topic-35"><span class="n">35</span>갈수량의 빈도분석</a></li>
+            <li><a href="#topic-36"><span class="n">36</span>수문자료의 시계열 분석</a></li>
+            <li><a href="#topic-37"><span class="n">37</span>PMP, PMF</a></li>
+            <li><a href="#topic-38"><span class="n">38</span>유역크기별 설계홍수량</a></li>
+            <li><a href="#topic-39"><span class="n">39</span>지하수와 침투류</a></li>
+            <li><a href="#topic-40"><span class="n">40</span>저류지 유형</a></li>
+          </ul>
+        </aside>
+
+        <div class="topics">
+
+          <div class="topic-card" id="topic-1">
+            <header><span class="num">1</span><h3>우리나라 수자원의 특성, 문제점과 대책</h3></header>
+            <div class="topic-body">
+              <h4>특성</h4>
+              <ul>
+                <li>연평균 강수량 약 1,283mm로 세계평균(973mm)의 1.3배</li>
+                <li>연 강수총량 약 1,276억m³ 중 손실량(증발산 등) 약 545억m³(43%), 하천유출량 약 731억m³(57%)</li>
+                <li>강수량의 계절적 편중이 커 이수·치수 모두 불리, 하상계수(최대/최소유량비)가 크고 불안정</li>
+                <li>대수층 반응이 빈약하여 지하수 개발이 어려움</li>
+              </ul>
+              <h4>문제점 및 대책</h4>
+              <ul>
+                <li>문제점: 물수요 증가, 이상기후(엘니뇨 등)로 인한 이상홍수·가뭄 빈발, 하천수 이용의 한계 도달, 유역간·지역간 물 분쟁 증가</li>
+                <li>대책: 다목적 수자원 인프라 확충, 유역종합관리체계 정비, 대체수자원(재이용수 등) 개발, 홍수예보시스템 등 비구조적 대책 병행</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-2">
+            <header><span class="num">2</span><h3>강수량 자료의 일관성 검사 및 오차보정</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>획득한 강수량 자료를 이용하기 전, 관측소 위치이전·관측방법 변경 등으로 자료에 인위적 불연속이 발생했는지 점검하고 이를 보정하는 것이 수문학적 해석의 기본이다.</p>
+              <h4>이중누가우량분석법 (Double Mass Analysis)</h4>
+              <ul>
+                <li>대상 관측소의 연도별 누가우량과 인근 여러 관측소 평균의 누가우량을 도시하여 비교</li>
+                <li>관계직선의 기울기가 일정하면 자료의 일관성이 있는 것으로 판단</li>
+                <li>기울기가 꺾이면(절곡점 발생) 그 시점 이후의 자료를 보정계수(절곡 이전 기울기/이후 기울기)로 조정</li>
+                <li>인근 관측점 10개 이상, 동질성 확보된 자료로 비교하는 것이 바람직</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-3">
+            <header><span class="num">3</span><h3>면적강수량 산정법</h3></header>
+            <div class="topic-body">
+              <ul>
+                <li>산술평균법: 각 관측소 강우량의 단순 산술평균, 지형·관측소 분포가 균등할 때 적용</li>
+                <li>Thiessen법: 각 관측소가 지배하는 다각형 면적으로 가중평균, 실무에서 가장 널리 사용</li>
+                <li>등우선법(Isohyetal Method): 등강우선을 그려 등우선 사이 면적으로 가중평균, 산악지형처럼 강우 변화가 큰 유역에서 정확도가 높음</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-4">
+            <header><span class="num">4</span><h3>IDF 곡선 (Intensity-Duration-Frequency)</h3></header>
+            <div class="topic-body">
+              <p>강우강도-지속시간-빈도의 관계를 나타낸 곡선으로, 확률강우량을 산정한 후 지속시간별로 도시하여 작성한다.</p>
+              <div class="formula">강우강도 공식(일반형)  I = a / (t+b)ⁿ
+(Talbot식, Sherman식, Japanese식 등 지역별 회귀식 사용)</div>
+              <p>합리식의 강우강도 산정, 하수관거·우수관로 설계 등 실무 전반에 필수적으로 활용된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-5">
+            <header><span class="num">5</span><h3>DAD 해석 (Depth-Area-Duration)</h3></header>
+            <div class="topic-body">
+              <p>강우깊이(Depth)-면적(Area)-지속시간(Duration)의 관계를 분석하는 기법으로, 유역면적과 지속시간에 따라 최대평균우량깊이가 어떻게 감소하는지를 나타낸다.</p>
+              <h4>절차</h4>
+              <p>지속시간별 최대평균강우량을 구하기 위해, 관측자료로부터 누가면적별 최대평균우량을 산정한 후 도시한다. PMP 산정, 유역면적별 강우량 보정 등에 활용된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-6">
+            <header><span class="num">6</span><h3>강우의 시간적 분포</h3></header>
+            <div class="topic-body">
+              <h4>Mononobe 방법</h4>
+              <div class="formula">R<sub>t</sub>(mm/h) = (R<sub>24</sub>/24)·(24/t)ⁿ</div>
+              <p>인근에서 개발된 방법으로 지속시간 개념 없이 누가강우량을 축차적으로 산정하며, 전진형·중앙집중형·지연형의 3가지 시간분포로 나눈다.</p>
+              <h4>Huff 방법</h4>
+              <p>강우 첨두 발생 위치별로 4분위 무차원 누가우량곡선을 사용한다. 우리나라 하천설계기준(2019)은 Huff 3분위(중앙집중형)를 표준으로 채택하고 있다.</p>
+              <h4>Yen-Chow 방법(삼각형 분포법)과 교호블록법</h4>
+              <ul>
+                <li>Yen-Chow: 강우 첨두를 삼각형 모양으로 표현, 강우전진계수 r=t<sub>a</sub>/t<sub>d</sub> (r&lt;0.5 전진형, r=0.5 중앙집중형, r&gt;0.5 지연형)</li>
+                <li>교호블록법(Alternating Block Method): IDF 곡선에서 각 지속시간별 강우강도를 구한 뒤, 최대강도를 중심으로 교호로 배치하여 시간분포 작성</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-7">
+            <header><span class="num">7</span><h3>증발산 (Evapotranspiration)</h3></header>
+            <div class="topic-body">
+              <p>증발(Evaporation, 수면·지면의 물분자가 에너지를 받아 연속적으로 액체→기체화)과 증산(Transpiration, 식물이 뿌리로부터 흡수한 수분을 잎에서 배출)의 합을 증발산(Evapotranspiration)이라 한다.</p>
+              <h4>영향인자와 산정</h4>
+              <ul>
+                <li>증발: 온도, 바람, 상대습도, 대기압, 수질, 표면성상</li>
+                <li>증산: 생리적 인자(종·엽면적), 환경적 인자(온도, 태양광, 토양·습도)</li>
+              </ul>
+              <div class="formula">Dalton의 법칙  E = C(e₀-e<sub>a</sub>)(a+bW)</div>
+              <p>저수지 증발량 산정법: 증발접시(Pan)법(계수 0.7 적용), 물수지법, 에너지수지법, 공기동역학법, Penman·Blaney-Criddle·Penman-Monteith(에너지수지+공기동역학 혼합법) 공식 등이 있다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-8">
+            <header><span class="num">8</span><h3>유효우량 산정기법 (직접유출-기저유출 분리법)</h3></header>
+            <div class="topic-body">
+              <p>강우로 인한 유출은 지표면유출(Infiltration을 넘는 부분)과 침투수가 지연되어 하천으로 흐르는 지표하유출, 지하수유출로 구성된다. 수문곡선 해석시에는 직접유출(강우 후 짧은 시간에 하천에 도달하는 부분)과 기저유출(무강우 지속시 지하수 유출로 유지되는 부분)로 분리한다.</p>
+              <h4>분리법</h4>
+              <ul>
+                <li>지하수 감수곡선법: 감수부의 지하수 감수곡선을 저류 축차적으로 작성해 분리</li>
+                <li>수평직선 분리법: 상승기점(A)와 수평선으로 (B점) 직결하여 분리</li>
+                <li>N-day법: N=A^0.2 (또는 0.8A^0.2, A: km²), 첨두시점으로부터 N-day 후의 점(B)까지 상승기점(A)을 직선으로 연결</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-9">
+            <header><span class="num">9</span><h3>침투능 산정</h3></header>
+            <div class="topic-body">
+              <p>침투능(Infiltration Capacity)이란 주어진 조건 하에서 침투가 일어날 수 있는 최대 침투율(fp, mm/hr)로, 시간에 따라 감소한다.</p>
+              <h4>침투능 지배인자</h4>
+              <p>토양의 종류·간극비·안정상태, 지연 보습의 깊이와 초기함수비, 식생 피복, 강우강도, 다짐정도 등</p>
+              <div class="formula">Horton식  f = f<sub>c</sub> + (f₀-f<sub>c</sub>)e^(-kt)
+Philip식  f(t) = (1/2)S·t^(-1/2) + K  (S: Sorptivity)
+Green-Ampt식  F(t) = K<sub>s</sub>t + (SχIMD)ln[1+F(t)/(SχIMD)]</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-10">
+            <header><span class="num">10</span><h3>NRCS 초과우량 산정법 (CN법)</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>미계측 유역에 대한 유역 토양특성·선행강우조건 등의 자료만으로도 유효우량을 산정할 수 있는 방법으로, 유역 토양군(수문학적 토양군 Hydrologic Soil Group A~D)과 선행토양함수조건(AMC-I,II,III)을 함께 고려한다.</p>
+              <h4>유출곡선지수 (CN)</h4>
+              <div class="formula">S = 25,400/CN - 254
+P<sub>e</sub> = (P-0.2S)² / (P+0.8S)   (단, P&gt;0.2S)
+
+CN-I = 4.2·CN<sub>Ⅱ</sub>/(10-0.058CN<sub>Ⅱ</sub>)
+CN-Ⅲ = 23·CN<sub>Ⅱ</sub>/(10+0.13CN<sub>Ⅱ</sub>)</div>
+              <p>토양군 A(낮은유출률)~D(높은유출률)로 분류하며, 도시·농경지 등 토지이용현황에 따라 CN값을 표로 제공받아 적용한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-11">
+            <header><span class="num">11</span><h3>관측소 위치선정조건 (강우·수위·유량)</h3></header>
+            <div class="topic-body">
+              <ul>
+                <li>강우관측소: 유역면적·유역방향·형상·강우상태·계원에 따라 배치, 인근 유역과 상관성이 좋은 곳</li>
+                <li>수위관측소: 유량과 수위가 일정한 관계를 갖는 곳, 관측이 용이하고 유지관리가 쉬운 곳, 세굴·퇴적 없는 곳</li>
+                <li>유량관측소: 만수시에도 유량관측이 안전하게 가능한 장소, 유로와 하상이 안정된 단면, 지수영향(배수)이 적은 곳</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-12">
+            <header><span class="num">12</span><h3>하천유량 측정법 개요</h3></header>
+            <div class="topic-body">
+              <p>이차자료의 대표 변수인 유량 Q는 하천유량 자료의 정확한 확보 및 오수관리시스템에서 매우 중요하다. 해당 지점의 정확한 수위-유량 관계에 적합한 방법을 택해야 하며(하천규모, 유황, 측정상 안정성, 경제성, 요구되는 정확도 등 고려), 관측 빈도별로 방법을 달리한다.</p>
+              <h4>측정 방법</h4>
+              <ul>
+                <li>직접 유량측정법(면적법): 관측한 수위에 해당하는 횡단면적과 평균유속을 Q=AV로 산정</li>
+                <li>수리학적 구조물 이용(위어, 오리피스, 계측수도 등)</li>
+                <li>추적자(Tracer) 농도 이용(희석법, dilution method)</li>
+                <li>간접법: 수면경사-면적법(예 극심한 홍수시 흔적조사에 의한 유량 유추)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-13">
+            <header><span class="num">13</span><h3>유속계·부자·화학·초음파·수리학적 유량측정법</h3></header>
+            <div class="topic-body">
+              <h4>유속계 (Price Current Meter)</h4>
+              <div class="formula">V = KN + BN  (N: 단위시간당 회전수, K,B: 검정계수)</div>
+              <p>횡단면을 여러 소단면으로 나누어 각 소단면의 평균유속을 2점법(V=½(V0.2+V0.8)), 1점법(V=V0.6), 3점법 등으로 측정 후 Q=ΣA·V로 산정한다.</p>
+              <h4>부자(Float)</h4>
+              <p>표면부자·봉부자를 하천에 띄워 일정거리 이동시간으로 유속을 측정하며, 부자 유속에 보정계수를 곱해 평균유속을 구한다.</p>
+              <h4>추적자(Tracer) 희석법</h4>
+              <div class="formula">농도 C₁의 유량 q를 농도 Cc인 하천에 주입 → 하류에서 평형상태 농도 Ce 측정
+Q = q·(C₁-Ce)/(Ce-C₂)</div>
+              <p>초음파 유속계는 상하류 방향 전파시간차를 이용하며, 위어·오리피스 등 수리학적 방법도 Q=CH^n 형태로 활용한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-14">
+            <header><span class="num">14</span><h3>수위-유량곡선, Loop형, 연장방법</h3></header>
+            <div class="topic-body">
+              <h4>Rating Curve</h4>
+              <p>같은 지점에서 상용하는 하천유량은 동시 측정한 수위-유량 관계로 나타낸 것으로, 이를 수위-유량 관계곡선(Rating Curve)이라 한다.</p>
+              <div class="formula">전대수지법  Q = C(H+a)ⁿ  (또는 Q = a·H^b+c)</div>
+              <h4>Loop형 발생 원인</h4>
+              <p>자연하천의 관측점은 하도용례(Q∝√S)만 적용시 홍수시 수문곡선의 상승부(fast)와 하강부(slow)의 수위가 동일하면 유량도 동일해야 하나, 실제로는 에너지경사가 다르므로 수용곡선이 연속해 유량을 계측시 Loop형이 나타난다.</p>
+              <h4>연장방법</h4>
+              <p>전대수지법, Stevens법(Q=CA√RS), Manning법, 부정류 방정식(연속방정식+운동량방정식)에 의한 수치해석적 연장 방법이 있다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-15">
+            <header><span class="num">15</span><h3>유출의 지배인자</h3></header>
+            <div class="topic-body">
+              <p>유출(Runoff)은 기상학적 인자(Climatic factor)와 지상학적 인자(Physiographic factor)에 의해 영향을 받는다.</p>
+              <h4>기상학적 인자</h4>
+              <p>강우의 종류·강우형·강우강도·지속시간(IDF), 시간적(전진·중앙집중·지연형) 및 공간적(DAD) 분포, 강우의 이동방향 등</p>
+              <h4>지상학적 인자</h4>
+              <ul>
+                <li>유역면적: 유역경계에 둘러싸인 면적, 유역면적이 크면 도달시간이 길고 평균 강우강도가 작아짐(비첨두유출량, 단위면적당 첨두유출량 작아짐), Q=CA^m</li>
+                <li>유역경사: 유역 출구~유역분수계까지 하천학적 유역길이(L)에 따라 결정</li>
+                <li>유역형상계수 K=A/Lc², 원형비 Fc=P/(4πA)^0.5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-16">
+            <header><span class="num">16</span><h3>수문곡선</h3></header>
+            <div class="topic-body">
+              <h4>구성</h4>
+              <p>발생원에 따른 분류로 지표면유출(Surface Runoff), 지표하유출(Subsurface Runoff), 지하수유출(Groundwater Runoff)로 구분하며, 하천유출 해석시에는 직접유출(Direct Runoff)과 기저유출(Base Runoff)로 나눈다.</p>
+              <h4>수문곡선의 구성</h4>
+              <ul>
+                <li>상승부(Rising Limb): 강우의 집중과 유역의 형상에 지배</li>
+                <li>변곡점(Inflection Point): 지표유출이 끝나는 시각</li>
+                <li>감수부(Recession Curve, Falling Limb): 강우특성에 무관, 침투와 표고에 지배되며 유역의 저류능에 지배</li>
+              </ul>
+              <p>도달시간(Lag Time): 유효강우 중심에서 첨두유량까지의 시간. 기저시간(Base Time): 수문곡선의 상승시점에서 직접유출이 끝나는 시각까지의 시간</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-17">
+            <header><span class="num">17</span><h3>단위도와 순간단위도</h3></header>
+            <div class="topic-body">
+              <h4>단위도 (Unit Hydrograph)</h4>
+              <p>특정 단위시간동안 균일한 강도로 유역 전 면에 걸쳐 균등하게 내리는 단위 유효우량(1cm)으로 인한 직접유출 수문곡선을 단위도라 한다.</p>
+              <h4>3대 가정</h4>
+              <ul>
+                <li>일정 기저시간 가정: 강우지속시간이 같으면 기저시간은 동일</li>
+                <li>비례가정: 수문곡선 종거는 강우강도에 비례</li>
+                <li>중첩가정: 임의 유효우량으로 인한 유출은 각 유출곡선의 합</li>
+              </ul>
+              <h4>순간단위도 (IUH)</h4>
+              <p>유역에 순간적으로 단위유효우량(1cm)이 내렸을 때 발생하는 수문곡선으로, 지속시간 0인 단위도이다. S-curve법, Clark 유역추적법, Nash 모형 등으로 유도된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-18">
+            <header><span class="num">18</span><h3>NRCS 합성단위도</h3></header>
+            <div class="topic-body">
+              <p>미계측 유역에 대해 단위도가 필요할 때, 유역의 지상학적 특성인자와의 상관관계식으로 단위도의 특성변수를 산정하는 합성단위도법 중 하나이다.</p>
+              <div class="formula">무차원 단위도를 이용해 도달시간(t<sub>p</sub>)과 첨두유량(Q<sub>p</sub>) 결정
+t<sub>p</sub> = ½t<sub>r</sub> + t<sub>L</sub>,   Q<sub>p</sub> = 484A / t<sub>p</sub>  [m³/s]</div>
+              <p>유역특성별로(산악지역, 평지, 완경사) 첨두유량·기저시간 계수가 표로 제공되며, Snyder 합성단위도(지체시간 t<sub>p</sub>=C<sub>t</sub>(L·L<sub>ca</sub>)^0.3)와 함께 미계측 유역 단위도 합성에 널리 사용된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-19">
+            <header><span class="num">19</span><h3>Nagayasu(나카야스) 종합단위도</h3></header>
+            <div class="topic-body">
+              <p>일본의 Nagayasu가 여러 유역에서 유도된 단위도의 특성변수와 유역의 지형학적 특성변수 간의 관계를 무차원 순간곡선으로 정리한 방법으로, 국내 유역 특성과 유사성이 강안되어 수공설계에 많이 사용된다.</p>
+              <div class="formula">상승부  Q/Q<sub>p</sub> = (t/t<sub>p</sub>)^2.4
+감수부(3구간)  Q/Q<sub>p</sub> = 0.3^[(t-t<sub>p</sub>)/t<sub>k</sub>]  등
+
+t<sub>p</sub> = 0.8t<sub>r</sub> + t<sub>g</sub>
+t<sub>g</sub>(유역도달시간): L&lt;15km → t<sub>g</sub>=0.21L^0.7 / L≥15km → t<sub>g</sub>=0.4+0.058L
+t<sub>k</sub> = 0.47(A·L)^0.25</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-20">
+            <header><span class="num">20</span><h3>합리식 (Rational Formula)</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>불투수 수초의 유역에 동일강도의 강우가 도달시간(tc)보다 긴 지속시간동안 내린다면, 유출량은 첨두유량이 도달시간 tc에 도달하는 순간 평형상태에 도달하며 첨두유량은 강우강도에 유역면적을 곱한 것과 같아진다.</p>
+              <div class="formula">Q = CIA/3.6   (I: mm/hr, A: km², Q: m³/s)
+Q = 0.2778·CIA</div>
+              <ul>
+                <li>유출계수(C): 유역의 피복과 토지이용에 따라 결정</li>
+                <li>적용면적 상한: 통상 소유역(약 10km² 이내)에 적용</li>
+                <li>비도달계수(Cf): 재현기간이 클수록 Cf&gt;1.0으로 증대 적용</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-21">
+            <header><span class="num">21</span><h3>임계지속시간 (Critical Storm Duration)</h3></header>
+            <div class="topic-body">
+              <p>수공구조물의 설계목적에 따라 홍수수문곡선의 첨두유량이 최대가 되거나, 저수용량이 최대가 되는 강우지속시간을 임계지속시간이라 한다. 강우의 지속시간에 따른 수문곡선의 변화를 고려하는 개념이다.</p>
+              <ul>
+                <li>홍수량이 최댓값인 경우 채택 지속시간: 홍수소통구조물(하천, 우수관로 등)</li>
+                <li>수문곡선에서 최대 저류량 또는 최대 수위 등 설계 임계지속시간을 채택: 저류구조물(댐, 홍수조절지, 배수펌프장 등)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-22">
+            <header><span class="num">22</span><h3>홍수추적(Flood Routing) 개요</h3></header>
+            <div class="topic-body">
+              <p>상류의 한 지점에서의 홍수수문곡선으로부터, 하류의 어떤 지점에서의 홍수수문곡선을 결정해가는 절차, 즉 홍수파가 하천의 임의구간을 통과하는 동안 그 구간 저류와 하도유출량에 의해 모양이 얼마나 감소되며 통과시간이 얼마나 걸리는가를 밝혀내는 과정이다.</p>
+              <ul>
+                <li>수문학적 홍수추적(Hydrologic Flood Routing): 연속방정식을 기초로 한 저류방정식을 사용하는 근사해법 — 저수지추적(PLUS법), 하도홍수추적(Muskingum, Muskingum-Cunge), 유역추적(Nash, Clark법)</li>
+                <li>수리학적 홍수추적(Hydraulic Flood Routing): 홍수파의 흐름을 수리학적으로 표시하는 부정부등류의 지배방정식(연속방정식+운동량방정식)을 결합해 해석</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-23">
+            <header><span class="num">23</span><h3>저수지 홍수추적 (PLUS법)</h3></header>
+            <div class="topic-body">
+              <p>Storage-Indication Method(PLUS법)는 유입수문곡선, 초기수위, 저수지 특성 및 방류구조규정이 주어진 조건에서 저수지로부터 방류되는 수문곡선을 계산하는 방법이다.</p>
+              <div class="formula">연속방정식  I-O = dS/dt
+½(I₁+I₂)Δt + (S₁-½O₁Δt) = (S₂+½O₂Δt)</div>
+              <p>유출량(I)과 저류량(S)의 S-O관계곡선을 사용해 홍수추적을 시행하는 방법으로, 저수지 홍수추적시 첨두홍수량 감쇠(Attenuation)와 첨두발생시간 지체가 함께 발생한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-24">
+            <header><span class="num">24</span><h3>Muskingum 하도 홍수추적</h3></header>
+            <div class="topic-body">
+              <p>McCarthy가 이론 근사법으로 산정한 Muskingum River Basin에서 홍수조절 계획수립에 최초로 사용한 하도 홍수추적법이다.</p>
+              <div class="formula">기본방정식  I-O = dS/dt,   S = K[xI+(1-x)O]
+(K: 하도구간의 저류상수/홍수파 전달시간, x: 하도의 저류에 공헌하는 유입량과 유출량의 상대적 웨이트)</div>
+              <ul>
+                <li>x=0: 저수지형 하천(자연하천), x=0.5: 순수 이동(단순 이동)만 반영</li>
+                <li>실무에서는 대체로 x=0.2~0.3 범위 채택</li>
+              </ul>
+              <div class="formula">축차계산식  O₂ = C₀I₂+C₁I₁+C₂O₁   (C₀+C₁+C₂=1)</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-25">
+            <header><span class="num">25</span><h3>Clark 유역추적법</h3></header>
+            <div class="topic-body">
+              <p>시간-면적 관계곡선에 의한 유역추적법으로, 유역의 최초강우~도달지점까지의 도달시간이 동일한 지역(등시선면적)을 저류상수와 결합해 순간단위도(IUH)를 유도하는 방법이다.</p>
+              <h4>절차</h4>
+              <ul>
+                <li>지형도 상에서 유역출구까지의 도달시간이 같은 지점(등시선)을 다수 작성</li>
+                <li>등시선 사이 면적을 구해 시간-면적곡선(순간단위 유효우량으로부터 직접유출 수문곡선) 작성</li>
+                <li>저류상수(K)를 도입해 순간 단위 유효우량으로 인한 유입도를 선형저수지(Linear Reservoir) 추적으로 지체·저감시킴</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-26">
+            <header><span class="num">26</span><h3>RRL 모형 (Road Research Laboratory)</h3></header>
+            <div class="topic-body">
+              <p>영국 도로연구소(RRL)가 도시배수관망의 설계홍수량을 계산하기 위해 개발한 방법이다.</p>
+              <ul>
+                <li>도시지역의 불투수 지표에 내린 강우가 신속히 유출되는 유입구 수문곡선을 계산</li>
+                <li>이를 배수관망 흐름공식(Manning식 등)으로 홍수추적하여, 배수관망 종점에서의 유출 수문곡선을 얻는 방법</li>
+                <li>ILLUDAS: RRL모형을 이용, 유역의 토양군변수·특성과 침투능을 고려해 지표면 유출을 계산하고 직접연결 불투수지역의 유출곡선과 합성하여 단위유역별 유출곡선 합성</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-27">
+            <header><span class="num">27</span><h3>장기유출모형</h3></header>
+            <div class="topic-body">
+              <h4>목적</h4>
+              <p>수문년계에 장기간(월, 년 등) 동안 강우-유출관계가 평균한 경우에 사용, 저수지 운영조작 분석에 활용한다.</p>
+              <h4>종류</h4>
+              <ul>
+                <li>연강우량-연유출고 관계, 원강우량-유출고 관계(가지 아님)</li>
+                <li>연변 강우시 유출모형: 3단·4단 Tank모형, 외국모형(SSARR, SWM, USDAHL 등)</li>
+              </ul>
+              <h4>Tank 모형</h4>
+              <p>유역의 유출특성을 3~4단의 Tank로 개념화하여 강우량을 각 Tank에 유입시키고, 각 Tank의 저류량에 따라 유출량·침투량·지하수 함양량이 산정된다. 저수지 계획, 갈수기 유출특성 분석 등에 적합하도록 기존 Tank모형의 단점을 보완한 종단 Tank모형도 있다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-28">
+            <header><span class="num">28</span><h3>용수지 모형 (Water Budget)</h3></header>
+            <div class="topic-body">
+              <p>계획유역에 예정된 용수 공급을 위하여, 유역 내의 강우 및 증발산량과 공급기준년의 자연유량을 공급계획으로 대비장으로서 유역 내 분배 및 지역에서 부족이 발생하는지 판단하는 것이다.</p>
+              <div class="formula">물수지 기본식(용수지) = (기준년도 자연유량) - (용수량+손실유량) + (삽부하량)</div>
+              <ul>
+                <li>이수 안정도(기준년도) 선정: 국조 '67~'68년의 주민유량을 기준</li>
+                <li>자연유량 산정: 하천유량은 실측유량과 순유출소모량을 합해 산정 (자연유량 = 실측유량 + 순유출소모량)</li>
+                <li>순유출소모량: 생공용수, 농업용수, 하천유지용수 등</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-29">
+            <header><span class="num">29</span><h3>수리학적 홍수추적</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>홍수파의 흐름을 수리학적으로 표시하는 부정부등류의 지배방정식(연속방정식과 운동량방정식, Saint-Venant식)을 결합하여 풀이하는 방법이다.</p>
+              <div class="formula">연속방정식  ∂A/∂t + ∂Q/∂x = q
+운동량방정식(Saint-Venant)  ∂Q/∂t + ∂(Q²/A)/∂x + gA(∂y/∂x) - gA(S₀-S<sub>f</sub>) = 0</div>
+              <h4>지배방정식의 변형</h4>
+              <p>관성력항의 고려 정도에 따라 동역학파(Dynamic Wave, 원방정식 그대로), 준정상 동역학파(Quasi-steady Dynamic Wave), 확산파(Diffusion Wave, 관성력항 무시), 운동파(Kinematic Wave, 중력과 마찰력이 균형)로 구분한다.</p>
+              <p>대부분은 수문학적 홍수추적으로 문제해결이 충분하나, 배수(Backwater) 영향이 심하고 변동성이 큰 하천구간, 댐 파괴로 인한 홍수추적, PMP와 같은 비정상적인 급격홍수추적에는 수리학적 방법이 필요하다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-30">
+            <header><span class="num">30</span><h3>단파 (Hydraulic Bore, Surge)</h3></header>
+            <div class="topic-body">
+              <p>일정한 유량으로 흐르는 하천이나 수로에서 상류나 하류의 흐름이 급조작되어 수심·유속 등 흐름의 특성이 변화하면, 그림과 같이 급격한 수위변동이 형성되어 상류나 하류로 전파되는데, 이러한 뚜렷한 급경사 전선을 단파(Surge)라 한다.</p>
+              <h4>종류</h4>
+              <ul>
+                <li>정단파(양단파): 단파 뒤 수심이 최초수심보다 큰 단파</li>
+                <li>부단파(음): 단파 뒤 수심이 적어지는 경우로 단파가 불안정하고 침파로 급속히 파괴</li>
+              </ul>
+              <div class="formula">전파속도(연속방정식+운동량방정식 이용)
+w - v₁ = ±√[ (g/2)(h₂/h₁)(h₁+h₂) ]</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-31">
+            <header><span class="num">31</span><h3>수문 분석기법 (Hydrologic Simulation Technique)</h3></header>
+            <div class="topic-body">
+              <p>어떤 기간동안 반응하는 인과관계의 수문사상에 대한 수문시스템의 반응을 수학적으로 재현하는 것을 수문모의라 한다.</p>
+              <ul>
+                <li>확정론적(Deterministic) 방법: 사상의 영역-출력 관계가 확정적인 법칙에 따름</li>
+                <li>추계학적(Stochastic) 방법: 수문사상의 비생성순서(과거 집단자료의 확률통계적 특성만 고려)와 발생순서(연의 통계적 특성 재현, 빈도 자료·회귀 수식적 예법)로 나뉨</li>
+              </ul>
+              <h4>모형 분류</h4>
+              <ul>
+                <li>매개변수의 공간적 취급: 집중형(Lumped, 유역을 동집단수로 봄) / 분포형(Distributed, 매개변수의 공간적 변화 고려)</li>
+                <li>계산 시간간격: 단일사상(Single-event) 모형 / 연속형(Continuous) 모형</li>
+                <li>모형의 구조적 특성: 수학적(개념) 모형 / 물리적(Physical, Scale model) 모형</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-32">
+            <header><span class="num">32</span><h3>수문통계 — 확률론적 수문분석기법</h3></header>
+            <div class="topic-body">
+              <h4>용어 정리</h4>
+              <div class="formula">재현기간(Return Period)  T = 1/P
+어떤 해 홍수가 나타날 확률  P = 1/T
+연속되는 N년동안 발생하지 않을 확률  P̄ⁿ = (1-1/T)ⁿ
+위험도(Risk)  R = 1 - (1-1/T)ⁿ</div>
+              <h4>확률 강수량 산정절차</h4>
+              <p>매년치 강우자료 추출 → 기본통계치 계산 → 확률분포형 선정(Gumbel, Type-Ⅰ, Type-Ⅲ, Gamma 등) → 매개변수 추정(모멘트법, 최우도법, 확률가중모멘트법, L-모멘트법) → 적합도 검정(Chi-square, K-S test, PPCC, CVM) → 확률강수량 결정</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-33">
+            <header><span class="num">33</span><h3>수문자료의 수집과 정리</h3></header>
+            <div class="topic-body">
+              <p>빈도해석을 위한 자료는 동질성을 갖는 모집단으로부터 독립적으로 얻은 무작위 표본이어야 한다.</p>
+              <h4>자료의 정확도와 대표성</h4>
+              <ul>
+                <li>정상성(Stationary): 자료의 통계적 특성(적률, 평균, 분산 등)이 시간에 따라 변화하지 않는 것</li>
+                <li>동질성(Homogeneous): 동일한 모집단에 속하는지 여부</li>
+                <li>일관성(Consistency): 자료의 변속성 나타냄, 관측지점 이전·관측방법 변경 등으로 결여</li>
+                <li>적합성(Adequacy): 관측기간의 적정 여부 판단, 관측기간이 짧으면 대표성 결여</li>
+              </ul>
+              <h4>이상치 처리</h4>
+              <div class="formula">이상치 판정기준  Y<sub>H</sub> = Ȳ + K<sub>n</sub>·S<sub>y</sub></div>
+              <p>과거에는 자료계열에서 이상치를 제거하고 보정하였으나, 최근에는 계측상 문제로 제외하기보다 실측 극한사상을 포함하는 것을 원칙으로 한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-34">
+            <header><span class="num">34</span><h3>빈도해석</h3></header>
+            <div class="topic-body">
+              <ul>
+                <li>지점빈도해석(Point Frequency Analysis): 분석대상 자료가 어떤 지점에 관측된 자료에 국한된 경우</li>
+                <li>지역빈도해석(Regional Frequency Analysis): 어떤 지역 내 여러 관측점의 정보를 결합해 동일 지역전체 유역의 빈도특성을 규명하는 경우</li>
+              </ul>
+              <h4>지수홍수법 (Index Flood Method)</h4>
+              <p>유역 내 여러 관측지점의 무차원화된 홍수량 빈도곡선을 지역화하는 대표적 방법이다.</p>
+              <div class="formula">Q<sub>T</sub> 지역화 절차:
+① 지역 내 유사특성 지점을 대상으로 각 관측지점의 빈도분석 실시
+② 각 관측지점의 빈도분석으로 특정재현기간 홍수량(Q<sub>T</sub>) 도출
+③ 무차원화(지수홍수로 나눔)하여 지역빈도곡선 작성
+④ 대상지점의 지수홍수 산정 후 지역빈도곡선을 이용해 Q<sub>T</sub> 결정</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-35">
+            <header><span class="num">35</span><h3>갈수량의 빈도분석</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <ul>
+                <li>한발(Drought): 하천유량의 저하로 물 공급을 지속시키기 곤란한 기간</li>
+                <li>갈수량: 갈수시 일정 시의 정상적인 하천유량</li>
+                <li>갈수분석: 물 공급계획으로부터 저장된 물을 안정적으로 공급할 수 있는지 여부를 판단하기 위해 실시</li>
+              </ul>
+              <h4>유황곡선 (Flow Duration Curve)</h4>
+              <p>지속곡선으로도 불리며, 어떤 지점에서 가용 하천유량의 규모와 유량 변동특성을 평가한다. 여러 하천과의 유황 비교에 효과적이다.</p>
+              <h4>유량 정의</h4>
+              <ul>
+                <li>풍수량: 1년 중 95일은 이보다 큰 유량이 발생하는 유량</li>
+                <li>평수량: 185일 기준 / 저수량: 275일 기준 / 갈수량: 355일 기준</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-36">
+            <header><span class="num">36</span><h3>수문자료의 시계열 분석</h3></header>
+            <div class="topic-body">
+              <h4>시계열 자료의 성분</h4>
+              <ul>
+                <li>경향성(Trend): 관측치의 전반에 걸쳐 진행된 증가/감소 추세</li>
+                <li>주기성(Periodicity): 일정 시간간격에 따라 반복하여 발생</li>
+                <li>지속성(Persistence): 전반적으로 존재하는 성질</li>
+                <li>이변성(Catastrophic): 돌발적으로 존재하는 이변적 현상(우연성)</li>
+              </ul>
+              <h4>자기상관분석(Correlogram)</h4>
+              <p>시차(lag k)에 따른 자기상관계수를 나타낸 그림으로, 시계열의 특성을 표현하고 형태에 따라 시계열모형을 판단하는 단서가 된다.</p>
+              <h4>추계모형의 종류</h4>
+              <p>이동평균모형(MA, Moving Average), 자기회귀모형(AR, Autoregression), 조화모형(SH, Sum of Harmonic), 조합형(ARMA, ARIMA) 등이 있다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-37">
+            <header><span class="num">37</span><h3>PMP, PMF (가능최대강수량·가능최대홍수량)</h3></header>
+            <div class="topic-body">
+              <h4>PMP (Probable Maximum Precipitation)</h4>
+              <p>어떤 지역에 대해 그 지역의 기상학적 조건에서 기상학적으로 발생 가능한 최대의 강우량으로, 지속기간과 유역면적에 따라 크기가 달라진다(PMP-DAD 곡선).</p>
+              <div class="formula">Hershfield 통계학적 공식  PMP<sub>av</sub> = P̄ + K<sub>m</sub>·S<sub>n</sub>
+포락선법(Envelope Curve)  PMP = 118.6D^0.44 (D≤24hr), PMP = 186.8D^0.206 (D&gt;24hr)</div>
+              <ul>
+                <li>산정방법: 수문기상학적 방법(전선형·전이형), 포락선법, 통계학적 방법</li>
+                <li>한국 PMP도: 20개 등우선도(6개 지속시간×4개 유역면적별) 작성, 2004년 이후 PMPδ(등우선도) 개편</li>
+              </ul>
+              <h4>PMF (Probable Maximum Flood)</h4>
+              <p>PMP를 이용해 유효강우 주상도를 작성하고 단위도법으로 도출한 최대 홍수량으로, 댐 등 최상위 안전등급이 필요한 구조물의 설계에 사용된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-38">
+            <header><span class="num">38</span><h3>유역 크기에 따른 설계홍수량 결정법</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>홍수량에 가장 지배적인 인자는 유역의 크기이다. 소유역의 명확한 정의는 없으나, 2.5km² 이하 또는 도달시간이 1시간 이내 정도이며 중소하천 유역은 대략 100~5,000km² 정도이다.</p>
+              <h4>규모별 설계홍수량 결정법</h4>
+              <ul>
+                <li>소유역: 강우량이 시간과 공간에서 균일한 분포로 간주되고, 단위도의 기본전제(강우-유출관계 단순)를 벗어나지 않아 단위도의 적용과 확대추정을 병행해 유출량 산정 (합리식, NRCS 단위도법, Nagayasu 합성단위도법, Snyder법, Clark 유역추적법 등)</li>
+                <li>대유역: 유역을 여러 소유역으로 분할해 소유역별로 하도추적을 반복하며 홍수량 산정, 대표적 종합모형(HEC-1, HEC-HMS)이 강우손실계산·직접유출계산·기저유출·하도홍수추적을 통합 처리</li>
+                <li>도시화 유역: 합리식, RRL, ILLUDAS, SWMM 등 도시유출 특화모형 사용</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-39">
+            <header><span class="num">39</span><h3>지하수와 침투류</h3></header>
+            <div class="topic-body">
+              <h4>지하수의 연직분포</h4>
+              <ul>
+                <li>통기대(Zone of Aeration): 모관수대(Capillary Zone), 중간수대(Intermediate Zone), 토양수대(Soil Water Zone)</li>
+                <li>포화대(Zone of Saturation) = 지하수 (Ground Water)</li>
+              </ul>
+              <h4>대수층의 종류</h4>
+              <ul>
+                <li>비피압대수층(자유면대수층, Unconfined Aquifer): 지하수가 자유수면을 가지며 대기압의 영향을 직접 받음</li>
+                <li>피압대수층(Confined Aquifer): 두 개의 불투수층 사이에 낀 대수층으로 대기압보다 큰 압력을 받음</li>
+              </ul>
+              <div class="formula">Darcy의 법칙  Q = k·A·(dh/dl)   (동수경사에 비례, Re&lt;1 층류 조건에서 성립)
+Dupuit 방정식(피압대수층 정상흐름)  q = (k/2x)(h₀²-h²)</div>
+              <h4>우물의 종류</h4>
+              <p>굴착정(Artesian Well, 피압대수층에서 양수), 심정(Deep Well, 자유수면 대수층에서 양수), 천정(Shallow Well, 비피압 지하수 얕은 부분에서 양수)</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-40">
+            <header><span class="num">40</span><h3>저류지 유형</h3></header>
+            <div class="topic-body">
+              <h4>완전체류와 부분체류</h4>
+              <ul>
+                <li>완전체류: 방류구간에서 한계수심이 발생하는 경우로, 방류량이 저류수심에만 좌우</li>
+                <li>부분체류: 방류관 자유수면이 낮아 방류구간에서 한계유량이 발생하지 않는 흐름으로, 방류량이 하류수위체계에 따라 다르게 되는 경우</li>
+              </ul>
+              <h4>On-line형과 Off-line형</h4>
+              <ul>
+                <li>On-line형(홍수조절지): 하천 본류상에 위치, 저류와 배제가 동시에 이루어지므로 연속홍수 발생시 상대적으로 안정</li>
+                <li>Off-line형(천변저류지): 하도에 접해 설치되는 저류지로, 제방의 인공적 낮춤이 있는 하도의 홍수소통량 중 일정유량 이상의 유수를 저류지로 우회시켜 저류하고자 하는 경우에 적용</li>
+              </ul>
+              <div class="callout">💡 On-line형은 수리계산에 강하고 유입과 배제가 동시에 이뤄져 연속홍수시에도 상대적으로 안정적이나, 저류지 유입부 인공제방에 따른 최정적 악영향이 우려된다. Off-line형은 평상시 소통이 원활하고 자연스럽게 치수능이 유지되나, 저류지 유입시설(전도수문 등) 설치비가 큰 경우 저류지 규모가 지나치게 커져 경제성이 떨어질 수 있다.</div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -86,6 +695,19 @@
     const open = gnb.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open);
   });
+
+  const tocLinks = document.querySelectorAll('.toc a');
+  const sections = Array.from(tocLinks).map(a => document.querySelector(a.getAttribute('href')));
+  const setActive = () => {
+    let idx = 0;
+    sections.forEach((sec, i) => {
+      if (sec && sec.getBoundingClientRect().top - 120 <= 0) idx = i;
+    });
+    tocLinks.forEach(a => a.classList.remove('active'));
+    tocLinks[idx].classList.add('active');
+  };
+  document.addEventListener('scroll', setActive);
+  setActive();
 </script>
 </body>
 </html>
