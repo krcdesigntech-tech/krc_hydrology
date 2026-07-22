@@ -469,6 +469,22 @@ img { max-width: 100%; display: block; }
 .site-footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--sp-6); }
 .site-footer strong { color: #fff; }
 
+/* ---------- 크레딧 배지 ---------- */
+.credit-badge {
+  position: fixed;
+  top: 0.8rem;
+  right: 1.4rem;
+  z-index: 1000;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.6);
+  background: rgba(0,0,0,.18);
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-pill);
+  pointer-events: none;
+  letter-spacing: .01em;
+}
+
 /* ---------- 반응형 ---------- */
 @media (max-width: 960px) {
   .container { padding: 0 var(--sp-8); }
@@ -487,4 +503,5 @@ img { max-width: 100%; display: block; }
   .layout { grid-template-columns: 1fr; }
   .toc { position: static; max-height: none; }
   .hero h1 { font-size: var(--fs-heading-xl); }
+  .credit-badge { font-size: 1rem; padding: 0.2rem 0.7rem; top: 0.6rem; right: 0.8rem; }
 }
