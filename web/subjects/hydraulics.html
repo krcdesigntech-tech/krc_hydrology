@@ -54,9 +54,9 @@
     <div class="container">
       <span class="tag">💧 SUBJECT</span>
       <h1>수리학</h1>
-      <p class="desc">흐름의 기본 원리, 관수로·개수로 이론 등 수리학 핵심 이론을 정리합니다.</p>
+      <p class="desc">흐름의 기본 원리, 관수로·개수로 이론, 유사·세굴 등 수리학 핵심 이론 37개 주제를 정리합니다.</p>
       <div class="progress-row">
-        <span class="progress-badge todo">자료 준비중</span>
+        <span class="progress-badge done">37개 주제 정리완료</span>
       </div>
     </div>
   </section>
@@ -67,17 +67,656 @@
         <span class="ico">📄</span>
         <span>
           <b>원본 스캔 자료</b>
-          <span>세부 정리 전까지 원본 PDF로 먼저 확인하세요.</span>
+          <span>손글씨 원본이 필요하면 PDF로도 확인할 수 있습니다.</span>
         </span>
       </div>
 
-      <div class="empty-state">
-        <div class="ico">🚧</div>
-        <h3>내용 정리 중입니다</h3>
-        <p>수리학 세부 목차와 주제별 정리는 준비 중입니다. 아래 원본 자료를 참고해 주세요.</p>
-        <p style="margin-top:1.6rem;">
-          <a class="cta-link" href="../../1.수리학.pdf">원본 PDF 열기 →</a>
-        </p>
+      <div class="layout" style="padding-top:0;">
+        <aside class="toc">
+          <h4>목차</h4>
+          <ul>
+            <li><a href="#topic-1"><span class="n">1</span>에너지·운동량 보정계수</a></li>
+            <li><a href="#topic-2"><span class="n">2</span>베르누이의 정리</a></li>
+            <li><a href="#topic-3"><span class="n">3</span>관망(Hardy-Cross)</a></li>
+            <li><a href="#topic-4"><span class="n">4</span>수격작용</a></li>
+            <li><a href="#topic-5"><span class="n">5</span>조압수조</a></li>
+            <li><a href="#topic-6"><span class="n">6</span>흐름의 종류</a></li>
+            <li><a href="#topic-7"><span class="n">7</span>상류와 사류</a></li>
+            <li><a href="#topic-8"><span class="n">8</span>암거 수리설계</a></li>
+            <li><a href="#topic-9"><span class="n">9</span>도수현상</a></li>
+            <li><a href="#topic-10"><span class="n">10</span>수리상 유리한 단면</a></li>
+            <li><a href="#topic-11"><span class="n">11</span>소류력과 한계소류력</a></li>
+            <li><a href="#topic-12"><span class="n">12</span>등가 조도계수</a></li>
+            <li><a href="#topic-13"><span class="n">13</span>비에너지와 한계수심</a></li>
+            <li><a href="#topic-14"><span class="n">14</span>유체의 점성</a></li>
+            <li><a href="#topic-15"><span class="n">15</span>비력</a></li>
+            <li><a href="#topic-16"><span class="n">16</span>모세관 현상</a></li>
+            <li><a href="#topic-17"><span class="n">17</span>정수압</a></li>
+            <li><a href="#topic-18"><span class="n">18</span>부력과 부체의 안정</a></li>
+            <li><a href="#topic-19"><span class="n">19</span>관수로 수리특성곡선</a></li>
+            <li><a href="#topic-20"><span class="n">20</span>오리피스</a></li>
+            <li><a href="#topic-21"><span class="n">21</span>위어</a></li>
+            <li><a href="#topic-22"><span class="n">22</span>층류와 난류</a></li>
+            <li><a href="#topic-23"><span class="n">23</span>관수로 마찰손실</a></li>
+            <li><a href="#topic-24"><span class="n">24</span>경계층 이론</a></li>
+            <li><a href="#topic-25"><span class="n">25</span>부등류의 수면형</a></li>
+            <li><a href="#topic-26"><span class="n">26</span>축차계산법</a></li>
+            <li><a href="#topic-27"><span class="n">27</span>역적-운동량 방정식</a></li>
+            <li><a href="#topic-28"><span class="n">28</span>수리학적 상사·모형이론</a></li>
+            <li><a href="#topic-29"><span class="n">29</span>하천 수리모형(왜곡모형)</a></li>
+            <li><a href="#topic-30"><span class="n">30</span>HEC-RAS 모형</a></li>
+            <li><a href="#topic-31"><span class="n">31</span>수리구조물의 수리모형</a></li>
+            <li><a href="#topic-32"><span class="n">32</span>교량구간 배수계산</a></li>
+            <li><a href="#topic-33"><span class="n">33</span>유사</a></li>
+            <li><a href="#topic-34"><span class="n">34</span>저수지 퇴사</a></li>
+            <li><a href="#topic-35"><span class="n">35</span>침식성 수로 안정설계</a></li>
+            <li><a href="#topic-36"><span class="n">36</span>하천교량의 세굴</a></li>
+            <li><a href="#topic-37"><span class="n">37</span>펌프와 수차</a></li>
+          </ul>
+        </aside>
+
+        <div class="topics">
+
+          <div class="topic-card" id="topic-1">
+            <header><span class="num">1</span><h3>에너지 보정계수와 운동량 보정계수</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>실제유체는 벽면 마찰로 인해 단면 내 유속분포가 균일하지 않다. 평균유속 Vm으로 계산한 에너지·운동량과 실제유체의 값 사이의 차이를 보정하는 무차원 상수가 에너지 보정계수(α)와 운동량 보정계수(β)이다.</p>
+              <div class="formula">에너지 보정계수  α = (1/A)∫<sub>A</sub>(v/Vm)³ dA
+운동량 보정계수  β = (1/A)∫<sub>A</sub>(v/Vm)² dA</div>
+              <h4>크기 비교 및 대표값</h4>
+              <ul>
+                <li>이상유체(균일유속): α = β = 1</li>
+                <li>실제유체: 항상 α &gt; β &gt; 1 (유속분포가 불균등할수록, 즉 층류일수록 값이 커짐)</li>
+                <li>원형관 층류: α≈2.0, β≈1.33 / 원형관 난류: α≈1.01~1.10, β≈1.0~1.05</li>
+                <li>개수로: α≈1.03~1.36(보통 1.058), β≈1.0~1.12(보통 1.0)</li>
+              </ul>
+              <div class="callout">💡 만수로에서 흔히 α=1.0으로 가정하는 이유: 만수로는 대개 난류라 α가 1에 가깝고, 유속수두 항의 영향 자체가 작으며, 다른 오차에 비해 이 근사 오차가 무시할 만큼 작기 때문이다.</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-2">
+            <header><span class="num">2</span><h3>베르누이의 정리</h3></header>
+            <div class="topic-body">
+              <h4>1차원 Euler 방정식의 유도</h4>
+              <p>비점성·비압축성 유체를 가정하고 뉴턴 제2법칙(F=ma)을 유선 방향으로 적용하면 다음과 같은 1차원 오일러 방정식이 얻어진다.</p>
+              <div class="formula">dp/ρ + V·dV + g·dz = 0   (1차원 Euler 방정식)</div>
+              <h4>베르누이 방정식</h4>
+              <p>비압축성 유체에서 위 식을 적분하면:</p>
+              <div class="formula">p/γ + V²/2g + z = H (일정)
+   ㄴ 압력수두(Pressure Head)
+        ㄴ 속도수두(Velocity Head)
+             ㄴ 위치수두(Potential Head) → 총수두(Total Head)</div>
+              <h4>응용</h4>
+              <ul>
+                <li>피토관(Pitot tube): 유체 흐름에 넣어 속도수두+압력수두를 측정 → 에너지선(EL)을 연결</li>
+                <li>피에조미터(Piezometer): 관 벽에 세운 세관으로 압력수두만 측정 → 동수경사선(HGL)을 연결</li>
+              </ul>
+              <p>베르누이 방정식은 수리학적 문제 해결에 가장 많이 이용되는 방정식으로, 오리피스·피토관·벤투리미터 등 유체계기 설계 전반에 다양하게 활용된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-3">
+            <header><span class="num">3</span><h3>관망(Pipe Network)의 계산 — Hardy Cross 방법</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>복잡한 관수로 중 가장 복잡한 경우는 도시·읍의 상수도망처럼 여러 관이 서로 복잡하게 연결되어 폐합회로 또는 망을 형성하는 것으로, 이를 관망(Pipe Network)이라 한다.</p>
+              <h4>관망 해석의 조건</h4>
+              <ul>
+                <li>절점(교차점) 방정식: 각 절점에 유입·유출 유량의 합이 같아야 함, 즉 ΣQ = 0</li>
+                <li>폐합회로 방정식: 관망상의 임의 두 교점 사이에서 경로에 관계없이 손실수두의 합은 같음, 즉 Σh<sub>L</sub> = 0</li>
+              </ul>
+              <h4>Hardy Cross 방법 절차</h4>
+              <div class="formula">① 각 관의 h<sub>L</sub> = kQⁿ 으로 표현
+② 각 절점에서 ΣQ=0이 되도록 유량 Q₀ 가정
+③ hL=kQ₀ⁿ 계산하여 각 폐합회로에서 Σh_L = Σ(kQ₀ⁿ) ≈0인지 판별
+④ 0이 아니면  ΔQ = -Σ(kQ₀ⁿ) / Σ(nkQ₀ⁿ⁻¹)  계산
+⑤ Qᵢ = Q₀ + ΔQ 로 유량 보정
+⑥ ΔQ ≈ 0 이 될 때까지 반복</div>
+              <div class="callout">💡 Hardy Cross 법은 해석적 해법이 사실상 불가능한 관망 유량계산 문제에 적용하는 대표적 시행착오법(Trial &amp; Error)이다.</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-4">
+            <header><span class="num">4</span><h3>수격작용 (Water Hammer)</h3></header>
+            <div class="topic-body">
+              <h4>개요 및 원리</h4>
+              <p>수격작용이란 관로 내 유량을 급격히 변화(밸브 급폐쇄 등)시킬 때, 유속이 급변하면서 정상시 동수압보다 큰 압력이 관내에 발생하는 과도수리 현상이다. 뉴턴 제2법칙 F=ma에서 이론상 Δt→0이면 F→∞이지만, 실제로는 물의 압축성과 관벽의 탄성으로 압력파가 유한한 속도로 전파되며 상당히 큰 압력이 발생한다.</p>
+              <h4>압력파의 전파속도</h4>
+              <div class="formula">C = √(K/ρ),   1/E<sub>c</sub> = 1/E<sub>b</sub> + d·k/(E<sub>p</sub>·t)
+(E_b: 물의 체적탄성계수, E_p: 관벽 탄성계수, d: 관경, t: 관두께)</div>
+              <h4>폐쇄시간에 따른 최대압력</h4>
+              <ul>
+                <li>급폐쇄(t ≤ t<sub>c</sub>=2L/C): ΔP = ρCΔV (Joukowsky 공식)</li>
+                <li>완폐쇄(t &gt; t<sub>c</sub>): 급폐쇄보다 압력상승 작음, ΔP = P₀(N/2+√(N²/4+N)) (Allievi 공식)</li>
+                <li>관내 최대압력: P = P₀ + ΔP</li>
+              </ul>
+              <h4>방지대책</h4>
+              <ul>
+                <li>압력강하 방지: 펌프에 플라이휠 설치, 완만한 밸브 조작, 조압수조 설치</li>
+                <li>압력상승 방지: 완폐형 체크밸브, 안전밸브, 자동제어밸브 설치</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-5">
+            <header><span class="num">5</span><h3>조압수조 (Surge Tank)</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>수력발전소의 수압관로(penstock)와 같이 길이가 길고 고낙차인 수압관로에서, 수격작용에 의한 과대 압력변동을 감소시키기 위해 도수로와 수압관 사이에 설치하는 저수조를 조압수조라 한다. 밸브 급폐쇄시 발생하는 수격압을 조압수조 내 수면진동으로 흡수한다.</p>
+              <h4>설계 및 안정조건</h4>
+              <div class="formula">단동조압수조 단진동 주기  T = 2π√(L·A / g·A<sub>s</sub>)
+(L: 수로길이, A: 수로단면적, A_s: 조압수조 단면적)</div>
+              <ul>
+                <li>안정조건: Thoma 단면적 이상으로 조압수조 단면적을 확보해야 안정된 수면진동 유지</li>
+                <li>내압·외압에 대한 최대 허용압력 조건을 만족하는 경제적 단면 선정</li>
+              </ul>
+              <h4>조압수조의 종류</h4>
+              <ul>
+                <li>단동조압수조: 가장 단순한 구조, 부하변동에 따른 수면 상승·하강만 발생</li>
+                <li>차동조압수조: 급격한 수면변동에 신속 대응(라이저 이용)</li>
+                <li>제수공 조압수조: 오리피스로 저항손실을 부여해 감쇠 촉진</li>
+                <li>수실 조압수조: 단동형의 종단면적을 축소한 형태</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-6">
+            <header><span class="num">6</span><h3>흐름의 종류 (정류·부정류, 등류·부등류)</h3></header>
+            <div class="topic-body">
+              <ul>
+                <li>정류(Steady flow): 한 단면에서 흐름의 수리적 특성이 시간에 따라 변화하지 않음 (∂V/∂t=0)</li>
+                <li>부정류(Unsteady flow): 한 단면에서 흐름의 수리적 특성이 시간에 따라 변화함 (∂V/∂t≠0)</li>
+                <li>등류(Uniform flow): 흐름의 어느 단면에서나 수리적 특성이 변화하지 않음 (∂V/∂x=0)</li>
+                <li>부등류(Non-uniform flow): 흐름의 수리적 특성이 단면에 따라 변화함 (∂V/∂x≠0)</li>
+              </ul>
+              <h4>흐름의 분류 조합</h4>
+              <ul>
+                <li>정상등류: ∂V/∂t=0, ∂V/∂x=0 — 실험수로 등</li>
+                <li>정상부등류: ∂V/∂t=0, ∂V/∂x≠0 — 평상시 하천흐름</li>
+                <li>부정등류: ∂V/∂t≠0, ∂V/∂x=0 — 자연계에 존재하지 않음</li>
+                <li>부정부등류: ∂V/∂t≠0, ∂V/∂x≠0 — 홍수시 하천, 홍수파, 고조파 등</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-7">
+            <header><span class="num">7</span><h3>상류와 사류</h3></header>
+            <div class="topic-body">
+              <h4>Froude수</h4>
+              <div class="formula">Fr = 관성력/중력의 제곱근비 = V / √(gD)
+  D: 수리평균수심(단면적/수면폭)</div>
+              <ul>
+                <li>Fr = 1: 한계류(Critical flow)</li>
+                <li>Fr &lt; 1 (V &lt; √gD): 상류(Subcritical flow) — 유속이 비교적 느림</li>
+                <li>Fr &gt; 1 (V &gt; √gD): 사류(Supercritical flow) — 유속이 크고 수심이 얕음</li>
+              </ul>
+              <h4>상류·사류의 특징</h4>
+              <ul>
+                <li>상류: 평균유속의 중력파 전파속도가 유속보다 느려, 중력파가 상류로 전달됨 → 댐·위어 등 하류 구조물의 영향(수면상승, 배수 Backwater)이 상류로 전파</li>
+                <li>사류: 평균유속이 중력파 전파속도보다 커 중력파가 상류로 전달되지 못함 → 하류 구조물의 영향이 상류로 전파되지 않고, 도중 장애물이 있으면 월류(Overflow) 발생</li>
+              </ul>
+              <div class="formula">Reynolds수 Re = VD/ν (관수로), Re = VRh/ν (개수로, Rh=D/4)
+관수로: Re&lt;2,000 층류 / 2,000~4,000 천이역 / Re&gt;4,000 난류
+개수로: Re&lt;500 층류 / Re&gt;500 난류</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-8">
+            <header><span class="num">8</span><h3>관수로 암거의 수리설계</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>암거(Culvert)는 홍수를 배제하기 위해 도로·철도·제방 등을 횡단하여 설치하는 배수구조물이다. 수리설계의 핵심은 계획홍수량을 도로 침수 없이, 상류측 수위(Headwater level)를 과도하게 상승시키지 않고 안전하게 유하시킬 수 있는 경제적 단면과 매설심도를 결정하는 것이다.</p>
+              <h4>흐름 조절 형태</h4>
+              <ul>
+                <li>유입부 조절(Inlet Control): 유입구 형상·유입조건(area, shape)이 지배, 하류수위와 무관하게 HW/D로 결정</li>
+                <li>유출부 조절(Outlet Control): 단면적·형상·길이·경사·조도·하류수위(TW) 모두가 관계</li>
+              </ul>
+              <div class="formula">유입부 조절, 자유흐름(H/D≤1.2):  Q = (1.0~2.3)·B·H^1.5
+유입부 조절, 유입구 잠김(HW/D&gt;1.2):  Q = (0.6~0.8)·B·D·√(2g(H-0.5D))</div>
+              <h4>설계 절차 요약</h4>
+              <div class="formula">Step A: 자료수집 (설계유량, 대략적 암거경 등)
+Step B: 초기단면 산정
+Step C: 유입부·유출부 조절 각각 계산해 HW 큰 값 채택
+→ 최종 단면 결정, 유출유속 검토(V&gt;2.5m/s시 하류 세굴보호 검토)</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-9">
+            <header><span class="num">9</span><h3>도수현상 (Hydraulic Jump)</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>사류에서 상류로 흐름이 급변할 때 발생하는 불연속적인 수면상승 현상을 도수(Hydraulic Jump)라 한다. 상당한 크기의 에너지손실이 수반되므로, 베르누이 방정식보다는 역적-운동량 방정식으로 해석한다.</p>
+              <div class="formula">공액수심비 (구형단면):  y₂/y₁ = ½[-1 + √(1+8Fr₁²)]
+에너지손실:  ΔE = (y₂-y₁)³ / (4y₁y₂)</div>
+              <h4>도수 강도에 따른 분류 (Fr₁ 기준)</h4>
+              <ul>
+                <li>파상도수 (Undular Jump): 1 &lt; Fr₁ &lt; 1.7</li>
+                <li>약도수 (Weak Jump): 1.7 &lt; Fr₁ &lt; 2.5</li>
+                <li>진동도수 (Oscillating Jump): 2.5 &lt; Fr₁ &lt; 4.5</li>
+                <li>정상도수 (Steady Jump): 4.5 &lt; Fr₁ &lt; 9.0</li>
+                <li>강도수 (Strong Jump): Fr₁ &gt; 9.0</li>
+              </ul>
+              <p>사각도수(Oblique Hydraulic Jump)는 수로 벽면이 유수 방향과 경사질 때 형성되는 도수로, 수심의 급격한 변화가 흐름방향과 사교하여 발생한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-10">
+            <header><span class="num">10</span><h3>직사각형·제형 단면의 수리상 유리한 단면</h3></header>
+            <div class="topic-body">
+              <h4>개념</h4>
+              <p>일정한 수로경사·조도·주어진 단면적 조건에서 유량이 최대가 되는(윤변이 최소, 경심이 최대인) 단면을 최량수리단면이라 한다. Manning식에서 n, S가 일정할 때 A⁵ᐟ³/P²ᐟ³ 이 최대이면 유량이 최대이므로, dP/dy=0 조건에서 단면을 결정한다.</p>
+              <div class="formula">직사각형(b×y): A=by, P=b+2y → dP/dy=0 에서 b = 2y  (Rh=y/2)
+제형단면: 측면경사 θ=60°일 때 최량, P=2√3·y, b=(2/√3)y, A=√3·y²  (Rh=y/2)</div>
+              <h4>결론</h4>
+              <ul>
+                <li>최량수리단면에서는 항상 동수반경(Rh)이 수심의 절반이 된다는 공통점이 있음</li>
+                <li>실무에서는 시공성·안전성·경제성을 고려해 제형단면의 측면경사를 1.5~2 정도로 설계하는 것이 일반적</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-11">
+            <header><span class="num">11</span><h3>소류력과 한계 소류력</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>흐르는 물이 수로 바닥에 미치는 힘을 소류력(Tractive Force)이라 하며, 그 힘이 어느 한계를 넘어 토사가 소류력에 의해 움직이기 시작하는 순간의 단위면적당 힘을 한계소류력(Critical Tractive Force, τc)이라 한다.</p>
+              <div class="formula">소류력  τ₀ = γ·R·S₀
+Shields 무차원 함수  F<sub>s</sub> = τ₀ / [(γₛ-γ)·d]  = f(u*d/ν)
+(u* = √(τ₀/ρ): 마찰속도)</div>
+              <h4>Shields 곡선의 활용</h4>
+              <p>난류영역에서는 Fs ≈ 0.056으로 일정하며, 이 조건으로부터 안정하상에 필요한 하상재료 소요입경을 산정할 수 있다.</p>
+              <div class="formula">d = γ·Rh·S₀ / [0.056·(γₛ-γ)]</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-12">
+            <header><span class="num">12</span><h3>등가(환산) 조도계수</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>Manning 공식 V=(1/n)R²ᐟ³S¹ᐟ²에서 n은 조도계수이다. 하나의 단면 내에서 부분별 조도가 상이한 경우, 평균화된 등가조도계수를 사용한다.</p>
+              <h4>Horton-Einstein 방법</h4>
+              <p>각 소구간에서 유속이 동일하다고 가정하여 유도한다.</p>
+              <div class="formula">n<sub>e</sub> = [ Σ(Pᵢ·nᵢ^1.5) / ΣP ]^(2/3)   (Horton-Einstein)
+n<sub>e</sub> = [ Σ(Pᵢ·nᵢ²) / ΣP ]^(1/2)   (Pavlovskii, 전단응력 동일 가정)</div>
+              <h4>조도계수(n)에 영향을 미치는 요소</h4>
+              <p>표면조도, 식생, 수로의 불규칙성, 수로의 법선·단면변화, 청소·퇴적 상황, 계절적 변화, 부유물·수류속 등 매우 다양하며 종합적 판단이 필요하다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-13">
+            <header><span class="num">13</span><h3>비에너지와 한계수심(대응수심)</h3></header>
+            <div class="topic-body">
+              <h4>비에너지 (Specific Energy)</h4>
+              <p>수로바닥을 기준면으로 하여 측정한 단위중량당 물이 가지는 흐름의 에너지를 비에너지라 한다.</p>
+              <div class="formula">E = y + V²/2g
+
+유량 Q 일정시  dE/dy = 1 - Q²T/(gA³) = 1 - Fr²</div>
+              <h4>한계수심과 대응수심</h4>
+              <ul>
+                <li>한계류(Fr=1)일 때 비에너지가 최소 → 최소비에너지에 해당하는 수심이 한계수심 yc</li>
+                <li>Emin에 대응하는 수심은 y1, y2 두 개 존재하며 이를 대응수심(Alternate Depth)이라 함</li>
+                <li>직사각형단면: E<sub>min</sub> = (3/2)y<sub>c</sub></li>
+              </ul>
+              <p>수심에 따른 유량 변화(비에너지 일정): y→0일 때 Q→0, y→ymax일 때 Q→0, 한계수심 yc에서 최대유량 Qmax을 갖는다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-14">
+            <header><span class="num">14</span><h3>유체의 점성 (Viscosity)</h3></header>
+            <div class="topic-body">
+              <h4>정의 및 Newton의 점성법칙</h4>
+              <p>서로 인접하여 상대운동을 하는 유체층 사이의 마찰현상, 즉 흐름이 빠른 부분은 느린 부분을 가속하고 느린 부분은 빠른 부분을 감속하려는 성질을 점성이라 한다.</p>
+              <div class="formula">τ = μ·(du/dy)
+(τ: 전단응력, μ: 점성계수, du/dy: 각변형속도)</div>
+              <h4>점성계수와 동점성계수</h4>
+              <ul>
+                <li>점성계수(μ) 차원: [FL⁻²T] = [ML⁻¹T⁻¹], 단위 poise (1 poise = 1 dyne·s/cm²)</li>
+                <li>동점성계수 ν = μ/ρ, 차원 [L²T⁻¹], 단위 stoke (1 stoke = 1 cm²/s)</li>
+              </ul>
+              <h4>뉴턴유체와 비뉴턴유체</h4>
+              <p>τ=μ(du/dy)의 선형관계를 따르는 유체(물, 공기 등)를 뉴턴유체(Newtonian fluids)라 하며, Bingham plastic·pseudoplastic처럼 이 선형관계를 따르지 않는 유체를 비뉴턴유체(non-Newtonian fluids)라 한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-15">
+            <header><span class="num">15</span><h3>비력 (Specific Force)</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>비력이란 물의 단위중량당 정수압과 동수압(운동량)의 합으로, 마찰이 없는 수평수로에서는 모든 단면에서 일정하다.</p>
+              <div class="formula">M = h<sub>G</sub>·A + Q²/(gA) = 일정
+직사각형 단면:  M = y²/2 + Q²/(gy) = 일정</div>
+              <h4>비력곡선과 공액수심</h4>
+              <p>수심에 따른 비력 그래프에서 동일한 비력 M에 대응하는 두 수심 y1, y2가 존재하며 이를 공액수심(Sequent Depth)이라 하고, 도수 전후의 수심관계 해석에 활용된다. 비력이 최소가 되는 지점 역시 한계류(Fr=1) 조건과 일치한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-16">
+            <header><span class="num">16</span><h3>모세관 현상</h3></header>
+            <div class="topic-body">
+              <h4>표면장력과 응집력·부착력</h4>
+              <p>액체 표면 분자 사이의 응집력과 액체-고체 경계면의 부착력의 상대적 크기에 따라 액체 표면이 상승 또는 하강하는 현상이 모세관 현상(Capillary Action)이다. 물은 부착력&gt;응집력(접촉각 θ&lt;90°)이라 상승, 수은은 응집력&gt;부착력(θ&gt;90°)이라 하강한다.</p>
+              <div class="formula">모세관고  h = 4σ·cosθ / (γ·d)
+(σ: 표면장력, θ: 접촉각, d: 관경)</div>
+              <p>관경 D가 1cm보다 작을 때만 모세관현상의 영향이 유의미하며, 대부분의 수리설계에서는 무시할 만큼 작다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-17">
+            <header><span class="num">17</span><h3>정수압 (Hydrostatic Pressure)</h3></header>
+            <div class="topic-body">
+              <h4>정수압의 성질</h4>
+              <ul>
+                <li>정수압은 한 점에서 모든 방향에 대해 크기가 같다 (Pascal의 원리)</li>
+                <li>정수압은 면에 직각으로 작용하고 수심에 비례한다</li>
+                <li>절대압력 = 대기압 + 게이지압력, 표준 대기압 = 760mmHg ≈ 10.33m H₂O</li>
+              </ul>
+              <h4>정수압의 측정</h4>
+              <p>수압관(Piezometer), 부르동 압력계(Bourdon gauge), 액주계(Manometer: 단관식·시차식·U자형·역U자형·2액 액주계 등)로 측정한다.</p>
+              <div class="formula">수평면에 작용하는 전압력  P = γ·h<sub>G</sub>·A
+작용점(압력중심)  h<sub>P</sub> = h<sub>G</sub> + I<sub>G</sub>/(h<sub>G</sub>·A)
+(I_G: 도심에 대한 단면 2차모멘트)</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-18">
+            <header><span class="num">18</span><h3>부력과 부체의 안정</h3></header>
+            <div class="topic-body">
+              <h4>부력(Buoyancy)</h4>
+              <p>유체에 잠겨 있거나 떠 있는 물체가 유체로부터 받는 연직 상향의 힘을 부력이라 한다. Archimedes 원리에 따라 부력은 물체가 배제한 체적에 해당하는 유체 무게와 같다.</p>
+              <div class="formula">B = γ·V   (V: 배제된 유체체적)</div>
+              <h4>부체의 안정성 판정</h4>
+              <p>부심과 무게중심을 지나는 연직선과 부력작용선의 교점을 경심(Metacenter, M)이라 하며, 경심고 MG의 부호로 안정성을 판정한다.</p>
+              <div class="formula">경심고  MG = MB ± GB
+MG &gt; 0: 안정(Stable) / MG = 0: 중립(Neutral) / MG &lt; 0: 불안정(Unstable)
+횡동요 주기  T = 2πk/√(gh)  (k: 회전반경, h: 경심고)</div>
+              <p>부체 운동의 6자유도: surging, swaying, heaving, yawing, pitching, rolling</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-19">
+            <header><span class="num">19</span><h3>관수로 수리특성곡선</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>원형관 등 일정 조도의 관수로에서, 만관시 유속·유량·경심·단면적(첨자 F) 대비 임의 충수비(d/D) 상태의 유속·유량·경심(V/Vf, Q/Qf, R/Rf)을 나타낸 곡선을 수리특성곡선이라 한다.</p>
+              <h4>대표적 특이점</h4>
+              <ul>
+                <li>Manning n 고정 가정시, d/D ≈ 0.94~0.95 부근에서 Qmax/Qf ≈ 1.08 로 만관보다 큰 최대유량 발생</li>
+                <li>d/D ≈ 0.81 부근에서 Vmax/Vf ≈ 1.14 로 최대유속 발생</li>
+              </ul>
+              <p>하수관거 등 부분충수 상태의 통수능 검토에 실무적으로 활용된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-20">
+            <header><span class="num">20</span><h3>오리피스 (Orifice)</h3></header>
+            <div class="topic-body">
+              <h4>개요 및 Torricelli 정리</h4>
+              <p>오리피스는 수조·측벽 등에 뚫은 규칙적 형상의 구멍으로, 유체의 유량 측정에 사용된다.</p>
+              <div class="formula">Torricelli 정리:  V = √(2gh)</div>
+              <h4>종류와 유량계수</h4>
+              <ul>
+                <li>작은오리피스(수두변화 무시) / 큰오리피스(수두변화 고려) / 수중오리피스 / 관오리피스</li>
+                <li>유속계수 Cv = 0.94~0.99, 수축계수 Ca, 유량계수 C = Cv·Ca</li>
+              </ul>
+              <div class="formula">작은 오리피스:  Q = C<sub>a</sub>√(2gH)
+큰 오리피스(직사각형):  Q = (2/3)C<sub>b</sub>√(2g) (H₁^1.5 - H₂^1.5)
+수중 오리피스:  Q = C<sub>a</sub>√(2g(h₁-h₂))</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-21">
+            <header><span class="num">21</span><h3>위어 (Weir)</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>수로를 횡단하여 설치한 벽 위로 물을 월류시켜 유량을 측정하거나 수위를 조절하는 구조물이다. 종류로 전폭위어, 삼각위어, 광정위어 등이 있다.</p>
+              <div class="formula">전폭(직사각형) 위어  Q = (2/3)C<sub>b</sub>√(2g)·H^1.5
+삼각위어  Q = (8/15)C·tan(θ/2)·√(2g)·H^2.5
+Thomson위어(θ=90°, C=0.593)  Q = 1.40H^2.5 (m/s)
+Francis 공식(전폭위어, C=0.623)  Q = 1.84(b - n·H/10)H^1.5
+광정위어  Q = 1.70C<sub>b</sub>·H₀^1.5</div>
+              <h4>용어</h4>
+              <p>Notch(절단부), Nappe(월류하는 흐름층), Crest(위어 상단면). 정부폭이 얇으면 예연위어(Sharp-crested weir), 두꺼우면 광정위어(Broad-crested weir)로 구분한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-22">
+            <header><span class="num">22</span><h3>층류와 난류</h3></header>
+            <div class="topic-body">
+              <h4>Reynolds의 실험</h4>
+              <p>층류(Laminar flow)는 유체입자가 서로 층을 이뤄 질서정연하게 흐르는 흐름이고, 난류(Turbulent flow)는 유체입자가 불규칙한 운동을 하며 운동량 교환이 활발한 흐름이다. Reynolds 실험에서는 밸브 개도를 서서히 늘려 유속을 증가시킴에 따라 염료가 직선(층류)에서 무질서한 확산(난류)으로 전이되는 것을 관찰한다.</p>
+              <div class="formula">Re = ρVD/μ = VD/ν
+관수로: Re&lt;2,000 층류 / 2,000~4,000 천이역 / Re&gt;4,000 난류
+개수로(Rh=D/4): Re&lt;500 층류 / Re&gt;500 난류</div>
+              <h4>유속분포 특성</h4>
+              <p>층류의 유속분포는 포물선형(Vmax=2Vmean)이며, 난류는 대수분포에 가까운 완만한 형태를 갖는다. 난류의 전단응력은 τ=ε(du/dy) (ε: 와점성계수)로 표현한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-23">
+            <header><span class="num">23</span><h3>관수로(마찰손실)</h3></header>
+            <div class="topic-body">
+              <h4>에너지방정식과 마찰손실</h4>
+              <div class="formula">p₁/γ+αV₁²/2g+z₁ = p₂/γ+αV₂²/2g+z₂+h<sub>f</sub>+h<sub>m</sub>
+
+Darcy-Weisbach 공식:  h<sub>f</sub> = f·(L/D)·(V²/2g)
+Hagen-Poiseuille(층류):  f = 64/Re</div>
+              <h4>Moody 선도 및 대표 마찰공식</h4>
+              <ul>
+                <li>Moody 선도는 층류(f=64/Re)·천이영역·완전난류영역으로 구분, 상대조도(ε/D)와 Re의 함수로 f 결정</li>
+                <li>Chezy: V=C√(RS) / Hazen-Williams: V=0.849·Chw·R^0.63·S^0.54 (상수관망) / Manning: f=124.6n²/D^(1/3)</li>
+              </ul>
+              <h4>미소손실 (Minor Losses)</h4>
+              <p>단면 급확대·급축소, 만곡, 밸브, 접합부 등에서 발생하며 h<sub>m</sub>=k(V²/2g)로 표현한다. 관로가 매우 긴 경우(L/D≥3,000)에는 마찰손실이 지배적이므로 미소손실을 무시할 수 있다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-24">
+            <header><span class="num">24</span><h3>경계층 이론 (Boundary Layer)</h3></header>
+            <div class="topic-body">
+              <h4>정의</h4>
+              <p>경계면으로부터 가까운 거리 안쪽에서만 유속이 경계면 조건에 도달하기까지 변화하며, 그 이상 떨어진 영역에서는 점성·마찰의 영향이 경계면 부근에 국한된다. 이 영향을 받는 층을 경계층이라 정의한다.</p>
+              <div class="formula">특성 Reynolds수  Re<sub>x</sub> = V₀·x/ν
+Re<sub>x</sub> ≤ 500,000 : 층류경계층 /  그 이상 : 난류경계층
+층류경계층 두께  δ/x = 5/√Re<sub>x</sub></div>
+              <h4>발달과정</h4>
+              <p>선단으로부터 층류경계층 → 특성 Re가 임계값 이상이 되면 천이 → 난류경계층으로 발달한다. 유체 경계층 이론은 에너지항두 관점에서 경계면 부근 마찰손실의 물리적 근거를 설명하는 핵심 이론이다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-25">
+            <header><span class="num">25</span><h3>부등류(점변류)의 수면형</h3></header>
+            <div class="topic-body">
+              <h4>기본방정식</h4>
+              <div class="formula">dy/dx = (S₀ - S<sub>f</sub>) / (1 - Fr²)</div>
+              <ul>
+                <li>dy/dx &gt; 0 (흐름방향 수심 증가): 배수곡선(Backwater curve)</li>
+                <li>dy/dx = 0: 수면선 // 수로바닥, 등류 형성</li>
+                <li>dy/dx &lt; 0 (흐름방향 수심 감소): 저하곡선(Drawdown curve)</li>
+              </ul>
+              <h4>13개 수면곡선 형태</h4>
+              <p>하상경사(M: 완경사, S: 급경사, C: 한계경사, H: 수평경사, A: 역경사) 5개 유형과, 수심이 등류수심(yn)·한계수심(yc)에 대해 어느 영역(제1·2·3영역)에 있는지의 조합으로 총 13가지 수면형(M1,M2,M3, S1,S2,S3, C1,C3, H2,H3, A2,A3)으로 분류된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-26">
+            <header><span class="num">26</span><h3>축차계산법 (Step Method)</h3></header>
+            <div class="topic-body">
+              <h4>부등류 수면곡선 계산법의 분류</h4>
+              <p>직접적분법(Bresse법, Chow법), 축차계산법(직접축차계산법, 표준축차계산법), 도식해법(그래픽법)으로 나뉜다.</p>
+              <h4>직접축차계산법 (Direct Step Method)</h4>
+              <p>단면형이 일정한 수로에 적용하는 간단한 계산법이다.</p>
+              <div class="formula">Δx = (E₂ - E₁) / (S₀ - S<sub>f</sub>)</div>
+              <h4>표준축차계산법 (Standard Step Method)</h4>
+              <p>단면형이 불규칙한 자연하천에도 적용 가능한 방법으로, 지배단면의 수면표고를 알 때 거리 Δx만큼 떨어진 단면의 수면표고를 에너지방정식을 이용해 시행착오적으로 계산한다. 실무에서는 HEC-2, HEC-RAS 등 컴퓨터 프로그램으로 처리한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-27">
+            <header><span class="num">27</span><h3>역적-운동량 방정식</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>연속방정식·베르누이 방정식과 함께 유체흐름 해석의 3대 도구 중 하나로, 뉴턴 제2법칙에서 유도된다.</p>
+              <div class="formula">ΣF = ρQ(V₂ - V₁)
+2차원 성분:  ΣFx = ρQ(V2x-V1x),  ΣFy = ρQ(V2y-V1y)
+합력  R = √(Fx²+Fy²),  θ = tan⁻¹(Fy/Fx)</div>
+              <h4>활용</h4>
+              <p>정지 평판, 고정된 만곡관·경사판, 이동하는 날개(터빈 버킷 등)에 작용하는 힘 계산에 사용되며, 관수로·개수로 내 도수 등 여러 유체 흐름 문제 해결에 편리하게 이용된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-28">
+            <header><span class="num">28</span><h3>수리학적 상사와 모형이론</h3></header>
+            <div class="topic-body">
+              <h4>완전상사의 구성</h4>
+              <p>완전상사(Hydraulic Similarity) = 기하학적 상사 + 운동학적 상사 + 동역학적 상사</p>
+              <ul>
+                <li>기하학적 상사: 원형과 모형의 대응 길이비 Lr = Lp/Lm 가 일정 (왜곡모형: 하구모형처럼 수평·연직 축척비를 다르게 만든 모형)</li>
+                <li>운동학적 상사: 대응점에서 속도·가속도·유량의 방향과 비가 동일 (Vr=Lr/Tr, Qr=Lr³/Tr)</li>
+                <li>동역학적 상사: 대응점에 작용하는 힘의 비가 일정</li>
+              </ul>
+              <h4>지배력에 따른 모형법칙</h4>
+              <div class="formula">Reynolds 모형법칙(점성력 지배): Re_p = Re_m
+Froude 모형법칙(중력 지배): Fr_p = Fr_m → Vr = √Lr
+Weber 모형법칙(표면장력 지배), Cauchy 모형법칙(탄성력 지배, 수격작용)
+Euler 모형법칙(압력 지배)</div>
+              <div class="callout">💡 완전상사는 5개 힘(압력·중력·점성력·표면장력·탄성력)의 상사비를 모두 만족해야 하나 사실상 불가능하므로, 실무에서는 지배력 하나만 고려하는 불완전상사(경험적 보정 병행)를 사용한다.</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-29">
+            <header><span class="num">29</span><h3>하천 수리모형 (왜곡모형)</h3></header>
+            <div class="topic-body">
+              <p>자연하천은 불규칙한 단면 형상과 수로의 만곡 등으로 순수 해석적 방법만으로는 신뢰성 있는 예측이 어려워, 수리모형을 통해 정밀하게 검토한다.</p>
+              <h4>왜곡모형(Distorted Model)</h4>
+              <p>연직축척비(Yr)와 수평축척비(Xr)를 다르게 만든 모형이다(Xr=Yr이면 정사모형). 정사모형으로 제작시 수심이 너무 작아져 유속 측정이 곤란하고 조도계수 조절도 어려우며 흐름이 층류화되기 쉬우므로, 연직축척을 수평축척과 다르게 왜곡시켜 이러한 문제를 완화한다.</p>
+              <div class="formula">Froude 상사 적용:  Vr = √Yr,  Qr = Xr·Yr^1.5
+조도계수비  n<sub>r</sub> = Rh<sub>r</sub>^(2/3) / X<sub>r</sub></div>
+              <p>왜곡도(Xr/Yr)는 통상 3~6 정도로 설계한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-30">
+            <header><span class="num">30</span><h3>HEC-RAS 모형</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>HEC-RAS(Hydrologic Engineering Center's River Analysis System)는 미 공병단 수문공학센터가 개발한 1차원 하천흐름 수면곡선 계산 모형이다. 복합 하도망(합류·분류·loop형·횡월류), 정류·부정류·혼합류 해석, 교량·암거·위어 등 다양한 수공구조물의 영향을 수면선 계산에 반영하고 세굴평가도 가능하다.</p>
+              <h4>HEC-RAS와 HEC-2의 차이</h4>
+              <ul>
+                <li>HEC-RAS: Windows GUI 기반, 상류·사류 혼합계산 가능 / HEC-2: 구형 DOS 환경체계, 혼합류 계산 불가</li>
+                <li>한계류 계산방식: HEC-RAS는 모멘텀법+Parabolic법, HEC-2는 Polynomial법 사용</li>
+                <li>교량·암거 해석법에도 단면형태·손실계산 방식에 차이가 있음</li>
+              </ul>
+              <div class="callout">💡 부등류 해석에 실무에서 가장 널리 이용되는 모형이지만, 단면 입력값·조도계수 등 매개변수에 대한 이용자의 이해와 검증이 여전히 중요하다.</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-31">
+            <header><span class="num">31</span><h3>수리구조물의 수리모형</h3></header>
+            <div class="topic-body">
+              <h4>목적</h4>
+              <p>여수로·위어·수문·감세공·하류지·유량측정용 수로·교량 및 교각 등 각종 수리구조물의 흐름 특성을 분석하기 위한 모형 실험이다. 흐름을 원활하게 하면서 하상세굴을 방지하는 구조물을 설계하는 것이 목적이다.</p>
+              <h4>모형의 종류</h4>
+              <ul>
+                <li>부분단면모형(Sectional Model): 흐름에 직각으로 놓인 구조물의 폭이 큰 경우, 단면적으로 만든 짧은 연부만 설치해 실험</li>
+                <li>완전모형(Complete Model): 축척적으로 완전한 구조물 모형에 접근·하류수로를 갖추어 종단방향 흐름특성 조사</li>
+              </ul>
+              <p>위어의 수리모형은 축척비 5:1~40:1, 최소 월류수두가 6mm 이상이 되도록 설계(표면장력 영향 방지)해야 한다. 댐 여수로 모형은 원류형·나팔형(Morning-glory)·사이폰형(Siphon Spillway) 등 유형별로 실험한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-32">
+            <header><span class="num">32</span><h3>교량구간 배수계산</h3></header>
+            <div class="topic-body">
+              <p>교량의 교각은 흐름 단면을 축소시켜 상·하류 흐름상태에 영향을 미친다. 흐름이 상류(Subcritical)인 경우 교각으로 인한 배수곡선(M1형)이 발생해 상류측 수심이 증가하지만, 사류인 경우에는 이러한 배수곡선이 발생하지 않는다.</p>
+              <div class="formula">d'Aubuisson 공식  Q = C<sub>b</sub>·h₂·y₃·√(2g(h<sub>a</sub>-h<sub>L</sub>)+V₃²)
+(Cb = 0.90~1.05)</div>
+              <p>단면 1(상류)·2(교각)·3(하류)에 에너지방정식을 적용하고 손실수두를 고려해 교각으로 인한 수위상승분(ha)을 산정한다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-33">
+            <header><span class="num">33</span><h3>유사 (Sediment)</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>침식(Erosion) → 유수에 의한 운반 → 퇴적으로 이어지는 일련의 과정을 유사라 한다. 형태별로 소류사(Bed load), 도약유사(Saltation load), 부유사(Suspended load)로 분류하며, 전유사=소류사+부유사(또는 washload 포함)이다.</p>
+              <h4>Du Boys의 하천유사량 추정식</h4>
+              <div class="formula">q<sub>B</sub> = C·T₀·(T₀-T₀c)
+(q_B: 단위폭당 유사량, C: 유사입경에 따른 계수, T₀: 소류력, T₀c: 한계소류력)</div>
+              <p>Du Boys(1879)의 실험연구는 하천 유송토사량을 추정하는 회귀식의 대표적 원류로, 이후 유사량 산정 연구의 기초가 되었다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-34">
+            <header><span class="num">34</span><h3>저수지 퇴사</h3></header>
+            <div class="topic-body">
+              <h4>문제점</h4>
+              <p>저수지 내 토사퇴적으로 저수용량 감소, 상류측 하상 상승, 하류측 하상 저하(세굴), 댐 취수·방류설비의 기능 저하 등이 발생한다.</p>
+              <h4>포착률 (Trap Efficiency)</h4>
+              <p>하천의 유사이송량 중 저수지에 의해 차단되는 비율, 즉 저수지 상류에서 유입되는 유사량과 저수지에 퇴적되는 유사량의 비율(%)로, 저수지 크기·유입량·저수지 운영조건·유사특성에 좌우된다.</p>
+              <ul>
+                <li>포착률 경험식: Brune 곡선, Churchill 식, USBR 퇴적곡선 등</li>
+                <li>비유사량 산정법: 유량-유사량 곡선법, 저수지 퇴사자료 이용법, 경험공식법</li>
+              </ul>
+              <p>퇴사형상은 저수지 규모·형상·유입토사 입도분포·저수위 변화상황에 좌우되며 첨부·전면·저면 퇴적층 및 밀도류 퇴적층으로 구성된다.</p>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-35">
+            <header><span class="num">35</span><h3>침식성 수로의 안정설계 (안정하도 설계법)</h3></header>
+            <div class="topic-body">
+              <h4>개요</h4>
+              <p>하천이나 수로는 장기간에 걸쳐 국부적 세굴과 퇴적을 거친 뒤, 하상경사·단면이 일정한 평형상태(안정하도)에 도달해 안정성을 유지한다.</p>
+              <h4>설계기법</h4>
+              <ul>
+                <li>최대허용유속법(Method of Max. Permissible Velocity): 토사입자가 침강 조건에서 유실되지 않는 최대유속 결정</li>
+                <li>최대소류력법(Method of Permissible Tractive Force): Schoklitsch법, Shields곡선법, USBR곡선법 등으로 수로 단면의 최대소류력이 허용소류력 이하가 되도록 설계</li>
+                <li>평형하상 개념에 의한 방법(Regime theory): 실측 안정수로 자료를 통계적으로 처리해 안정단면 결정</li>
+              </ul>
+              <div class="formula">Kennedy 공식(Regime theory의 최초 공식)  V = a·y^b
+(a=0.84, b=0.52~0.73)</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-36">
+            <header><span class="num">36</span><h3>하천교량의 세굴</h3></header>
+            <div class="topic-body">
+              <h4>세굴의 구성</h4>
+              <div class="formula">총세굴 = 장기적 하상변동 + 단면축소세굴(Contraction Scour) + 국부세굴(Local Scour)</div>
+              <ul>
+                <li>장기적 하상변동: 자연적·인위적 원인으로 인한 장기간에 걸친 하상높이 변동</li>
+                <li>단면축소세굴: 교량 등 구조물이 흐름단면을 축소시켜 유속·수위가 증가함으로써 발생</li>
+                <li>국부세굴: 교각·교대 주변에서 유속의 가속작용과 마제형 와류(Horseshoe vortex), 후류(Wake vortex) 등으로 발생</li>
+              </ul>
+              <h4>국부세굴 영향 인자 및 계산식</h4>
+              <p>수심 증가·교각 폭 증가·유속 증가(한계유속의 1/2배 이상)·교각각도(흐름과 사교)일수록 세굴심이 커지며, 유선형 교각일수록 세굴심이 작다.</p>
+              <div class="formula">교각 국부세굴(CSU 공식):  y<sub>s</sub> = 2.0·K₁K₂K₃K₄·α^0.65·y₁^0.35·Fr^0.43
+교대 국부세굴: HIRE 공식, Froehlich 공식 등</div>
+            </div>
+          </div>
+
+          <div class="topic-card" id="topic-37">
+            <header><span class="num">37</span><h3>펌프와 수차</h3></header>
+            <div class="topic-body">
+              <h4>상사법칙 (Affinity Law)</h4>
+              <div class="formula">Q ∝ N·D³,  H ∝ N²D²,  P ∝ N³D⁵
+(N: 회전수, D: 임펠러 직경)</div>
+              <h4>펌프와 수차의 종류</h4>
+              <ul>
+                <li>펌프: 수리펌프(원심펌프·사류펌프·축류펌프), 용적펌프(왕복동), 로터리펌프, 에어리프트펌프</li>
+                <li>수차: 충동수차(Pelton — 고낙차), 반동수차(Francis — 중낙차, 프로펠러/Kaplan — 저낙차)</li>
+              </ul>
+              <div class="formula">펌프 양정  H<sub>p</sub> = H + (h<sub>L1</sub>+h<sub>L2</sub>)
+펌프 동력  E = γQH<sub>p</sub>/(75η) [HP]  또는  E = 9.8QH<sub>p</sub>/η [kW]</div>
+              <h4>공동현상(Cavitation)과 NPSH</h4>
+              <p>유수 중 압력이 포화증기압 이하로 떨어지면 기포가 발생하고, 압력 회복 구간에서 기포가 붕괴하며 소음·진동·표면손상을 유발하는 현상이 공동현상이다.</p>
+              <div class="formula">NPSH = Pa/γ - Hs - Pv/γ
+설계조건: NPSH &gt; NPSH<sub>m</sub> (펌프 제조사 요구값)
+Thoma 캐비테이션계수  σ = NPSH/Hs</div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -97,6 +736,19 @@
     const open = gnb.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open);
   });
+
+  const tocLinks = document.querySelectorAll('.toc a');
+  const sections = Array.from(tocLinks).map(a => document.querySelector(a.getAttribute('href')));
+  const setActive = () => {
+    let idx = 0;
+    sections.forEach((sec, i) => {
+      if (sec && sec.getBoundingClientRect().top - 120 <= 0) idx = i;
+    });
+    tocLinks.forEach(a => a.classList.remove('active'));
+    tocLinks[idx].classList.add('active');
+  };
+  document.addEventListener('scroll', setActive);
+  setActive();
 </script>
 </body>
 </html>
